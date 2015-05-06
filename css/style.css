@@ -1,10 +1,18 @@
 .button {
     font-family: 'Poiret One';
     text-align: center;
-    width: auto;
     margin: 40px auto;
 }
 
+.toilet-butt{
+    width: 25em;
+    font-size: 2.5em;
+}
+
 body{
-    background-color: 
+    background-color: #6ABBCD;
+}
+
+a{
+    display: block;
 }
