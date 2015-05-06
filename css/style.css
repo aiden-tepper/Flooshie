@@ -1,3 +1,10 @@
 .button {
-    font-family: 'Poiret One'
+    font-family: 'Poiret One';
+    text-align: center;
+    width: auto;
+    margin: 40px auto;
+}
+
+body{
+    background-color: 
 }
