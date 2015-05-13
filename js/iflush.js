@@ -1,6 +1,13 @@
 angular.module("flooshie", [])
-.controller("toiletCtrl", ["$scope",function($scope){
-    
+.controller("toiletCtrl", ["$scope", "$http", function($scope, $http){
+    //MAKE URL VARIABLE
+    $http.put(url)
+    .success(function(data){
+        console.log(data);
+    });
+    .error(function(){
+        console.log("ERROR");
+    });
 }]);
 
 
