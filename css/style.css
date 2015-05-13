@@ -9,6 +9,10 @@
     font-size: 2.5em;
 }
 
+.headers{
+    text-align: center;
+}
+
 body{
     background-color: #6ABBCD;
 }
