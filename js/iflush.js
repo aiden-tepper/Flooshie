@@ -1,5 +1,26 @@
 angular.module("flooshie", [])
 .controller("toiletCtrl", ["$scope", "$http", function($scope, $http){
+    
+    $("#poo").on("click", function(){
+        
+    };
+                 
+    $("#pee").on("click", function(){
+        
+    };
+    
+    function liftSeat(){
+        
+    };
+    
+    function lowerSeat(){
+        
+    };
+    
+    function flush(){
+        
+    };
+    
     //MAKE URL VARIABLE
     $http.put(url)
     .success(function(data){
