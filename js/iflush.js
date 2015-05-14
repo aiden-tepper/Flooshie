@@ -2,52 +2,32 @@ angular.module("flooshie", [])
 .controller("toiletCtrl", ["$scope", "$http", function($scope, $http){
     
     if(localStorage["flushes"]){
-    var flushes = JSON.parse(localStorage.getItem("flushes"));
+    var flushCount = JSON.parse(localStorage.getItem("flushCount"));
 } else {
-    localStorage.setItem("flushes",JSON.stringify({}));
-    var flushes = {} ;
+    localStorage.setItem("flushCount",JSON.stringify({}));
+    var flushCount = {} ;
 };
     
-    $scope.deviceId = "00e04c035ad5";
-    $scope.accessToken = "4fdb248ad771e101c196f31e5be93dffaa247d6994ebe490e303c1e55f1970ed";
-    $scope.URL = "https://api-http.littlebitscloud.cc/devices/" + $scope.deviceId;
+     $scope.accessToken = "4fdb248ad771e101c196f31e5be93dffaa247d6994ebe490e303c1e55f1970ed";
     
-    $("#poo").on("click", function(){
-        
+    $scope.deviceId1 = "00e04c035ad5";
+    $scope.URL1 = "https://api-http.littlebitscloud.cc/devices/" + $scope.deviceId1 + "/output";
+    
+    $scope.deviceId2 = "243c200bf913";
+    $scope.URL2 = "https://api-http.littlebitscloud.cc/devices/" + $scope.deviceId2 + "/output";
+    
+    $http.defaults.headers.common.Authorization = "Bearer " + $scope.accessToken;
+    
+    $scope.poo = function(){
+        console.log("POO");
+        $http.post($scope.URL2, {percent: 100, duration_ms: 2000})
+        .success(function(data){
+            alert("Flooshed!");
+        })
+        .error(function(err){
+            console.log(err);
+        });
     };
-                 
-    $("#pee").on("click", function(){
-        
-    };
-    
-    function liftSeat(){
-        
-    };
-    
-    function lowerSeat(){
-        
-    };
-    
-    function flush(){
-        //this.flush==true;
-    //if button=pressed down {
-        //flush   
-    }
-    function count() {
-        this.current = 0;
-        if flush=true;
-        this.current ++
-//}
-
-    
-    //MAKE URL VARIABLE
-    $http.put(url)
-    .success(function(data){
-        console.log(data);
-    });
-    .error(function(){
-        console.log("ERROR");
-    });
 }]);
 
 
