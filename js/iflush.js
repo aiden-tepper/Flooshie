@@ -1,33 +1,19 @@
 angular.module("flooshie", [])
 .controller("toiletCtrl", ["$scope", "$http", function($scope, $http){
-    var gender;
     
-    if(localStorage["settings"]){
-        var settings = JSON.parse(localStorage.getItem("settings"));
-    } else {
-        var settings = getPreferences();
-        localStorage.setItem("settings",JSON.stringify(settings));
-    };
-    
-    gender = settings.gender;
-    
-    function getPreferences () {
-        return {"gender":"male"}
-    }
-
-    
-    
+    if(localStorage["flushes"]){
+    var flushes = JSON.parse(localStorage.getItem("flushes"));
+} else {
+    localStorage.setItem("flushes",JSON.stringify({}));
+    var flushes = {} ;
+};
     
     $("#poo").on("click", function(){
-        lowerSeat();
+        
     };
                  
     $("#pee").on("click", function(){
-        if (gender==“male”) {
-		  liftSeat ();
-	   } else {
-		  lowerSeat ();
-	   }
+        
     };
     
     function liftSeat(){
@@ -39,8 +25,16 @@ angular.module("flooshie", [])
     };
     
     function flush(){
-        
-    };
+        //this.flush==true;
+    //if button=pressed down {
+        //flush   
+    }
+    function count() {
+        this.current = 0;
+        if flush=true;
+        this.current ++
+//}
+
     
     //MAKE URL VARIABLE
     $http.put(url)
@@ -53,11 +47,3 @@ angular.module("flooshie", [])
 }]);
 
 
-
-
-var flush = Function() {
-    if button=pressed down {
-        flush 
-        
-    }
-}
