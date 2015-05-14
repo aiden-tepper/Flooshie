@@ -8,10 +8,12 @@
     src: url('../fonts/Quadranta-Bold.otf');
 }
 
-.button {
+.btn {
+    margin:             ;
     font-family: 'Poiret One';
     text-align: center;
-    margin: 2em auto;
+    margin: 10px;
+    border-radius: 30px;
 }
 
 .toilet-butt{
