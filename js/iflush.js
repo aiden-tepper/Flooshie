@@ -1,12 +1,8 @@
 angular.module("flooshie", [])
 .controller("toiletCtrl", ["$scope", "$http", function($scope, $http){
     
-    if(localStorage["flushes"]){
-    var flushCount = JSON.parse(localStorage.getItem("flushCount"));
-} else {
-    localStorage.setItem("flushCount",JSON.stringify({}));
-    var flushCount = {} ;
-};
+    var peeCount, pooCount, gender;
+    var data;
     
      $scope.accessToken = "4fdb248ad771e101c196f31e5be93dffaa247d6994ebe490e303c1e55f1970ed";
     
@@ -22,6 +18,8 @@ angular.module("flooshie", [])
         console.log("POO");
         $http.post($scope.URL2, {percent: 100, duration_ms: 2000})
         .success(function(data){
+            pooCount++;
+            localStorage.setItem("pooCount", pooCount);
             alert("Flooshed!");
         })
     };
@@ -29,12 +27,29 @@ angular.module("flooshie", [])
         console.log("PEE");
         $http.post($scope.URL1, {percent: 100, duration_ms: 2000})
         .success(function(data){
+            peeCount++;
+            localStorage.setItem("peeCount", peeCount);
             alert("Flooshed!");
         })
         .error(function(err){
             console.log(err);
         });
     };
+    
+    function initFromLocalStorage () {
+       if(localStorage["data"]){
+            data = JSON.parse(localStorage.getItem("data"));
+            peeCount = data.peeCount;
+            pooCount = data.pooCount;
+            gender = data.gender;
+        } else {
+            data = {peeCount: 0, pooCount: 0, gender = "male"} ;
+            localStorage.setItem("data",JSON.stringify(data));
+        }; 
+    }
+    
+    
+    
 }]);
 
 
