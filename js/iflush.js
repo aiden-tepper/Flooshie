@@ -43,7 +43,7 @@ angular.module("flooshie", [])
             peeCount: $scope.peeCount,
             pooCount: $scope.pooCount,
             gender: $scope.gender
-        }
+        };
         localStorage.setItem("data", JSON.stringify(data));
 
     }
@@ -55,7 +55,7 @@ angular.module("flooshie", [])
             $scope.pooCount = data.pooCount;
             $scope.gender = data.gender;
         } else {
-            data = {peeCount: 0, pooCount: 0, gender = "male"} ;
+            data = {peeCount: 0, pooCount: 0, gender: "male"} ;
             localStorage.setItem("data",JSON.stringify(data));
         }; 
     }
