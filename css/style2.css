@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Quadranta';
+    src: url('../fonts/Quadranta-Regular.otf');
+}
+
+.btn {
+    font-family: 'Poiret One';
+    text-align: center;
+    margin: 10px;
+    border-radius: 30px;
+}
+
+.headers{
+    text-align: center; 
+}
+
+#title{
+    font-family: 'Quadranta';
+    font-size: 3.5em;
+}
