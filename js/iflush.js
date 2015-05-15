@@ -24,6 +24,12 @@ angular.module("flooshie", [])
         .success(function(data){
             alert("Flooshed!");
         })
+    $scope.pee = function(){
+        console.log("PEE");
+        $http.post($scope.URL1, {percent: 100, duration_ms: 2000})
+        .success(function(data){
+            alert("Flooshed!");
+        })
         .error(function(err){
             console.log(err);
         });
