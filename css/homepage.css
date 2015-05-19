@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Quadranta';
+    src: url('../fonts/Quadranta-Regular.otf');
+}
+
+@font-face{
+    font-family: 'Quadranta-Bold';
+    src: url('../fonts/Quadranta-Bold.otf');
+}
