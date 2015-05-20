@@ -16,12 +16,12 @@
 }
 
 .toilet-butt{
-    width: 22em;
     font-size: 2.5em;
 }
 
 .headers{
-    text-align: center; 
+    text-align: center;
+    color: #E0EDF5;
 }
 
 body{
