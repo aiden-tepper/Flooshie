@@ -23,6 +23,7 @@ angular.module("flooshie", [])
         $http.post($scope.URL2, {percent: 100, duration_ms: 2000})
         .success(function(data){
             $scope.pooCount++;
+            console.log("Poo count increased to " + $scope.pooCount)
             alert("Flooshed!");
             updateLocalStorage();
         })
@@ -36,6 +37,7 @@ angular.module("flooshie", [])
         $http.post($scope.URL2, {percent: 100, duration_ms: 1250})
         .success(function(data){
             $scope.peeCount++;
+            console.log("Pee count increased to " + $scope.peeCount)
             alert("Flooshed!");
             updateLocalStorage();
         })
