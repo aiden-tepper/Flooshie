@@ -1,9 +1,9 @@
 angular.module("flooshie")
-.directive("getStarted", function(){
+.directive("homepage", function(){
     
     return {
         restrict: "E",
-        templateUrl: "GetStarted.html"
+        templateUrl: "../html/homepage.html"
     }
     
 });
