@@ -33,6 +33,10 @@ a{
     display: block;
 }
 
+p{
+    font-family: 'Quadranta';
+}
+
 #title{
     font-family: 'Quadranta';
     font-size: 3.5em;
