@@ -41,3 +41,7 @@ a{
 #sub-title{
     font-family: 'Quadranta';
 }
+
+#settingsPanel {
+    display: none;   
+}
