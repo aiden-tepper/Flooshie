@@ -7,3 +7,26 @@
     font-family: 'Quadranta-Bold';
     src: url('../fonts/Quadranta-Bold.otf');
 }
+
+#header-div{
+    position: fixed;
+    background-color: #6ABBCD;
+    margin-top: 0px;
+    border-bottom-left-radius: 
+}
+
+#header-title{
+    font-size: 65px;
+    font-family: Quadranta;
+    color: #FEFDFB;
+}
+
+#header-subtitle{
+    font-size: 40px;
+    font-family: Quadranta;
+    color: #FEFDFB;
+}
+
+#jumbo-water{
+    background-size: cover;
+}
