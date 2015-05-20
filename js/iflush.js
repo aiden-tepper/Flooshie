@@ -8,7 +8,7 @@ angular.module("flooshie", [])
     
     initFromLocalStorage();
     
-     $scope.accessToken = "4fdb248ad771e101c196f31e5be93dffaa247d6994ebe490e303c1e55f1970ed";
+    $scope.accessToken = "4fdb248ad771e101c196f31e5be93dffaa247d6994ebe490e303c1e55f1970ed";
     
     $scope.deviceId1 = "00e04c035ad5";
     $scope.URL1 = "https://api-http.littlebitscloud.cc/devices/" + $scope.deviceId1 + "/output";
@@ -49,6 +49,7 @@ angular.module("flooshie", [])
     }
     
     function initFromLocalStorage () {
+        console.log("init from local storage");
        if(localStorage["data"]){
             data = JSON.parse(localStorage.getItem("data"));
             $scope.peeCount = data.peeCount;
