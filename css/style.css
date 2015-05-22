@@ -46,6 +46,12 @@ p{
     font-family: 'Quadranta';
 }
 
+#settingsButton{
+    font-family: 'Quadranta';
+    border-radius: 10px;
+    
+}
+
 #settingsPanel {
     display: none;   
 }

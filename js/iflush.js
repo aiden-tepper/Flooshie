@@ -45,7 +45,7 @@ angular.module("flooshie", [])
         })
     };
     
-    $scope.changeSettings = function (var gender) {
+    $scope.changeSettings = function (gender) {
         $scope.gender = gender;
         $scoe.updateLocalStorage();
     }
