@@ -19,7 +19,7 @@ angular.module("flooshie", [])
     
     $scope.poo = function(){
         console.log("POO");
-        $http.post($scope.URL2, {percent: 100, duration_ms: 2000})
+        $http.post($scope.URL2, {percent: 100, duration_ms: 4000})
         .success(function(data){
             $scope.pooCount++;
             console.log("Poo count increased to " + $scope.pooCount)
@@ -33,7 +33,7 @@ angular.module("flooshie", [])
     
     $scope.pee = function(){
         console.log("PEE");
-        $http.post($scope.URL2, {percent: 100, duration_ms: 1250})
+        $http.post($scope.URL2, {percent: 100, duration_ms: 2000})
         .success(function(data){
             $scope.peeCount++;
             console.log("Pee count increased to " + $scope.peeCount)
