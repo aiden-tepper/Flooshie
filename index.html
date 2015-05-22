@@ -45,10 +45,14 @@
             <p>Poo Count: {{pooCount}}</p>
         </div>
         <div>
-            <button class="col-lg-3 col-md-3 col-sm-3 col-xs-3" id ="settingsButton" ng-click = "toggleSettings()">Settings</button>
-        </div>
-        <div id ="settingsPanel"> <!-- Toggle male and female. Button -->
-            <p>Settings: </p>
+            <button class="col-lg-2 col-md-2 col-sm-2 col-xs-2" id ="settingsButton" ng-click = "toggleSettings()">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </button>
+            <div id ="settingsPanel">
+                <h4 id="settings-gender">Gender</h4>
+                <h5 id="settings-male">Male</h5>
+                <h5 id="settings-female">Female</h5>
+            </div>
         </div>
     </div>
     <div class="container-fluid">
