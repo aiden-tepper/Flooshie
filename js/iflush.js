@@ -6,7 +6,6 @@ angular.module("flooshie", [])
     $scope.gender;
     var data;
     
-    initFromLocalStorage();
     
     $scope.accessToken = "4fdb248ad771e101c196f31e5be93dffaa247d6994ebe490e303c1e55f1970ed";
     
@@ -25,7 +24,7 @@ angular.module("flooshie", [])
             $scope.pooCount++;
             console.log("Poo count increased to " + $scope.pooCount)
             alert("Flooshed!");
-            updateLocalStorage();
+            $scope.updateLocalStorage();
         })
         .error(function(err){
             console.log(err);
@@ -39,7 +38,7 @@ angular.module("flooshie", [])
             $scope.peeCount++;
             console.log("Pee count increased to " + $scope.peeCount)
             alert("Flooshed!");
-            updateLocalStorage();
+            $scope.updateLocalStorage();
         })
         .error(function(err){
             console.log(err);
@@ -54,10 +53,9 @@ angular.module("flooshie", [])
         };
         localStorage.setItem("data", JSON.stringify(data));
 
-    }
+    };
     
     $scope.initFromLocalStorage = function () {
-        console.log("init from local storage");
        if(localStorage["data"]){
             data = JSON.parse(localStorage.getItem("data"));
             $scope.peeCount = data.peeCount;
@@ -65,16 +63,17 @@ angular.module("flooshie", [])
             $scope.gender = data.gender;
         } else {
             data = {peeCount: 0, pooCount: 0, gender: "male"};
-            settings ();
+            $scope.toggleSettings ();
             localStorage.setItem("data",JSON.stringify(data));
-            initFromLocalStorage();
+            $scope.initFromLocalStorage();
         }; 
-    }
+    };
 
-    $scope.toggleSettings function () {
+    $scope.toggleSettings = function () {
         $("#settingsPanel").slideToggle ();
-    }
+    };
     
+    $scope.initFromLocalStorage();
     
     
 }]);
