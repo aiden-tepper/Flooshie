@@ -45,6 +45,11 @@ angular.module("flooshie", [])
         })
     };
     
+    $scope.changeSettings = function (var gender) {
+        $scope.gender = gender;
+        $scoe.updateLocalStorage();
+    }
+    
     $scope.updateLocalStorage = function () {
         var data = {
             peeCount: $scope.peeCount,
